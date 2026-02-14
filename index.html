@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaltLyf Cruises – Port A's Only Self-Captain Boat Rental</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo"><span class="logo-script">SaltLyf</span> Cruises</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#boats">Our Boats</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#faq">FAQs</a></li>
+        <li><a href="#book" class="btn-nav">Book on Boatsetter</a></li>
+      </ul>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Port A's Only<br>self-captain boat rental</h1>
+      <p class="hero-sub">Pick up at Port Aransas Marina.</p>
+      <div class="hero-buttons">
+        <a href="#pontoon" class="btn btn-primary">Book the Pontoon</a>
+        <a href="#fishing" class="btn btn-outline">Book the Fishing Boat</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== CHOOSE YOUR BOAT ===== -->
+  <section class="boats-section" id="boats">
+    <h2 class="section-title">Choose Your Boat</h2>
+    <div class="boats-grid">
+
+      <!-- Pontoon Card -->
+      <div class="boat-card" id="pontoon">
+        <div class="boat-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=800&q=80" alt="Pontoon boat at sunset">
+        </div>
+        <div class="boat-info">
+          <h3>Pontoon</h3>
+          <ul>
+            <li>Up to 11 guests · Self-captain (option available)</li>
+            <li>Bluetooth speakers · Swim ladder</li>
+            <li>Perfect for groups and sunset cruises</li>
+          </ul>
+          <a href="#book" class="btn btn-card">View &amp; Book on Boatsetter</a>
+        </div>
+      </div>
+
+      <!-- Fishing Boat Card -->
+      <div class="boat-card" id="fishing">
+        <div class="boat-img-wrapper">
+          <img src="fish.png" alt="Fishing boat">
+        </div>
+        <div class="boat-info">
+          <h3>Fishing Boat</h3>
+          <ul>
+            <li>Up to 6 guests · No captain – you operate</li>
+            <li>Rod holders · Livewell cooler</li>
+            <li>Ideal for bay fishing and exploring channels</li>
+          </ul>
+          <a href="#book" class="btn btn-card">View &amp; Book on Boatsetter</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== WHY SALTLYF ===== -->
+  <section class="why-section" id="how-it-works">
+    <h2 class="section-title">Why SaltLyf</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-icon"><i class="fas fa-ship"></i></div>
+        <p>Only self-captain rental in Port A</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <p>Pick up at Port Aransas Marina</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+        <p>Book securely on Boatsetter</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><i class="fas fa-paw"></i></div>
+        <p>BYOB + pet friendly</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA / BOOK ===== -->
+  <section class="cta-section" id="book">
+    <h2>Ready to get on the water?</h2>
+    <p>Check out availability and book in minutes through <strong>Boatsetter</strong>.</p>
+    <a href="#" class="btn btn-cta">Book on Boatsetter</a>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="location">
+    <p>&copy; SaltLyf Cruises – Port Aransas, TX – Final booking and checkout occur on <a href="#">Boatsetter</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
