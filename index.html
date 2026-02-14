@@ -118,6 +118,36 @@
     <p>&copy; SaltLyf Cruises – Port Aransas, TX – Final booking and checkout occur on <a href="#">Boatsetter</a></p>
   </footer>
 
+  <!-- ===== CHATBOT ===== -->
+  <div class="chatbot-container" id="chatbotContainer">
+    <div class="chatbot-header">
+      <div class="chatbot-header-content">
+        <i class="fas fa-comments"></i>
+        <span>SaltLyf Cruises</span>
+      </div>
+      <button class="chatbot-close" id="chatbotClose" aria-label="Close chatbot">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages">
+      <div class="message bot-message">
+        <div class="message-content">
+          <p>Ahoy! 👋 Welcome to SaltLyf Cruises! I'm here to help you with information about our boat rentals. What would you like to know?</p>
+        </div>
+      </div>
+    </div>
+    <div class="chatbot-input-container">
+      <input type="text" id="chatbotInput" placeholder="Type your message..." autocomplete="off">
+      <button id="chatbotSend" aria-label="Send message">
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
+  <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open chatbot">
+    <i class="fas fa-comments"></i>
+    <span class="chatbot-badge">1</span>
+  </button>
+
   <script src="script.js"></script>
 </body>
 </html>
