@@ -385,10 +385,12 @@ h1, h2, h3 {
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
+  animation: float 4s ease-in-out infinite;
 }
 
 .boat-card:hover .boat-img-wrapper img {
   transform: scale(1.05);
+  animation: float 2s ease-in-out infinite;
 }
 
 .boat-info {
@@ -526,6 +528,8 @@ h1, h2, h3 {
 /* ===========================
    ANIMATIONS
    =========================== */
+
+/* Fade in from bottom */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -535,6 +539,202 @@ h1, h2, h3 {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Floating boat animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Slide in from left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide in from right */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scale in animation */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Pulse animation for buttons */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Wave animation for underlines */
+@keyframes wave {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.1);
+  }
+}
+
+/* Boat cards staggered animation */
+.boat-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.boat-card.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.boat-card:nth-child(1).animate-in {
+  transition-delay: 0.1s;
+}
+
+.boat-card:nth-child(2).animate-in {
+  transition-delay: 0.3s;
+}
+
+/* Why items animation */
+.why-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.why-item.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.why-item:nth-child(1).animate-in {
+  transition-delay: 0.1s;
+}
+
+.why-item:nth-child(2).animate-in {
+  transition-delay: 0.2s;
+}
+
+.why-item:nth-child(3).animate-in {
+  transition-delay: 0.3s;
+}
+
+.why-item:nth-child(4).animate-in {
+  transition-delay: 0.4s;
+}
+
+/* Hero content animation */
+.hero-content h1 {
+  animation: slideInLeft 1s ease-out;
+}
+
+.hero-content .hero-sub {
+  animation: slideInLeft 1s ease-out 0.2s backwards;
+}
+
+.hero-buttons {
+  animation: slideInLeft 1s ease-out 0.4s backwards;
+}
+
+/* Section title animation */
+.section-title {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-title.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-title::after {
+  transform: scaleX(0);
+  transition: transform 0.6s ease 0.3s;
+}
+
+.section-title.animate-in::after {
+  transform: scaleX(1);
+}
+
+/* CTA section animation */
+.cta-section h2,
+.cta-section p,
+.cta-section .btn-cta {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.cta-section h2.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cta-section p.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.cta-section .btn-cta.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+/* Button hover pulse */
+.btn-cta:hover {
+  animation: pulse 0.6s ease-in-out;
+}
+
+/* Icon rotation on hover */
+.why-icon {
+  transition: all 0.3s ease;
+}
+
+.why-item:hover .why-icon {
+  transform: translateY(-4px) rotate(5deg);
+}
+
+.why-icon i {
+  transition: transform 0.3s ease;
+}
+
+.why-item:hover .why-icon i {
+  transform: scale(1.1);
 }
 
 /* ===========================

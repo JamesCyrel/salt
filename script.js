@@ -66,23 +66,37 @@ window.addEventListener('scroll', () => {
 // Scroll-triggered fade-in animations
 // ===========================
 const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -30px 0px'
+  threshold: 0.15,
+  rootMargin: '0px 0px -50px 0px'
 };
 
-const fadeObserver = new IntersectionObserver((entries) => {
+const animateObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      fadeObserver.unobserve(entry.target);
+      entry.target.classList.add('animate-in');
+      animateObserver.unobserve(entry.target);
     }
   });
 }, observerOptions);
 
-// Apply fade-in to key sections
-document.querySelectorAll('.boat-card, .why-item, .cta-section, .section-title').forEach(el => {
-  el.classList.add('fade-in');
-  fadeObserver.observe(el);
+// Animate boat cards
+document.querySelectorAll('.boat-card').forEach(el => {
+  animateObserver.observe(el);
+});
+
+// Animate why items
+document.querySelectorAll('.why-item').forEach(el => {
+  animateObserver.observe(el);
+});
+
+// Animate section titles
+document.querySelectorAll('.section-title').forEach(el => {
+  animateObserver.observe(el);
+});
+
+// Animate CTA section elements
+document.querySelectorAll('.cta-section h2, .cta-section p, .cta-section .btn-cta').forEach(el => {
+  animateObserver.observe(el);
 });
 
 // ===========================
